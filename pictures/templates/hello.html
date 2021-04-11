@@ -28,6 +28,8 @@
             atque commodi consectetur cumque dicta dignissimos ducimus eligendi et exercitationem expedita 
             fuga ipsa ipsam labore, mollitia nemo odit officia officiis omnis porro possimus quibusdam 
             sunt suscipit ullam voluptate voluptatum.</p>
+
+        <h2>Kindly tap on each image to see the magic &#x2193;</h2>
     </div>
     <h1>Image Gallery</h1>
     <div class="gallery">
@@ -35,10 +37,10 @@
             <a href="{% static picture.image %}"><img src="{% static picture.image %}" alt="" title="" width="400px" height="350px"/></a>
         {% endfor %}
     </div>
-</div>
     <div class="footer">
         <footer>Copyright &copy; Toyin 2021</footer>
     </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js" integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg==" crossorigin="anonymous"></script>
     <script>
         let gallery = new SimpleLightbox('.gallery a')
