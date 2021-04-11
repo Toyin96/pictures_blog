@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.css" integrity="sha512-8WAX0xL/cHZ38RXoX2gtuqkAwmDVAzGwoFVmHvn46IDHGWOjTHx0vcl9OapNrfOzpFtql0SNkv+0y0b5Fm8ZkA==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+{% block page_content %}
+<div class="container">
+    <div class="main-header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Exclusive</a></li>
+            <li><a href="#">Other Exhibitions</a></li>
+        </ul>
+    </div>
+    <div class="text-area">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam corporis 
+            deleniti distinctio dolor eius fuga iure libero mollitia, nostrum nulla perspiciatis quia 
+            ratione repudiandae soluta, unde vero voluptatem? Assumenda deserunt ducimus eaque expedita 
+            maiores minus numquam sed velit? Aliquid commodi culpa debitis dicta distinctio, est facilis 
+            illum nam, numquam quia quibusdam quis quisquam ratione recusandae, tenetur? Alias, eum facere 
+            fugit ipsum neque perferendis praesentium quo voluptatibus? A accusantium amet aspernatur, 
+            atque commodi consectetur cumque dicta dignissimos ducimus eligendi et exercitationem expedita 
+            fuga ipsa ipsam labore, mollitia nemo odit officia officiis omnis porro possimus quibusdam 
+            sunt suscipit ullam voluptate voluptatum.</p>
+    </div>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        {% for picture in pictures %}
+            <a href="{% static picture.image %}"><img src="{% static picture.image %}" alt="" title="" width="400px" height="350px"/></a>
+        {% endfor %}
+    </div>
+</div>
+    <div class="footer">
+        <footer>Copyright &copy; Toyin 2021</footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js" integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg==" crossorigin="anonymous"></script>
+    <script>
+        let gallery = new SimpleLightbox('.gallery a')
+
+    </script>
+{% endblock %}
+</body>
+</html>
